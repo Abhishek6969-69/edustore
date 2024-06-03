@@ -11,7 +11,7 @@ function Electronic() {
     const fetchapi=async ()=>{
         const data1= await fetch(API);
         const json1=await  data1.json();
-        // console.log(json1);
+        
         setitemlist(json1);
         setlist(json1);
        }
@@ -20,16 +20,16 @@ function Electronic() {
     },[]);
     
     return (
-        <div className='flex justify-normal '>
-            <div className='border    w-80   h-96 p-2  m-24 '>
-                <div className='m-6'>
-                    <h1 className='m-6'>Category</h1>
-                    <ul className=''> 
-                        <li className='m-6 hover:cursor-pointer'  onClick={()=>{
+        <div className=' mx-8 md:mx-0  md:flex justify-normal '>
+            <div className='md:border    md:w-80   md:h-96 md:p-2  md:m-24 '>
+                <div className=' md:m-6 flex md:inline-block'>
+                    <h1 className='hidden md:inline-block m-6'>Category</h1>
+                    <ul className='flex mx-4 md:inline-block'> 
+                        <li className='m-2 md:m-6 hover:cursor-pointer'  onClick={()=>{
                              
                                 setitemlist(list);
                         }} >All</li>
-                        <li  className='m-6 hover:cursor-pointer' onClick={()=>{
+                        <li  className='m-2 md:m-6 hover:cursor-pointer' onClick={()=>{
                              const  list1= list.filter((f)=>{
                                     return f.category==="mobile";
                                 }
@@ -37,7 +37,7 @@ function Electronic() {
                                 )
                                 setitemlist(list1);
                         }}>Mobile</li>
-                        <li  className='m-6 hover:cursor-pointer'  onClick={()=>{
+                        <li  className='m-2 md:m- hover:cursor-pointer'  onClick={()=>{
                              const  list1= list.filter((f)=>{
                                     return f.category==="laptop";
                                 }
@@ -45,7 +45,7 @@ function Electronic() {
                                 )
                                 setitemlist(list1);
                         }}>Laptop</li>
-                        <li  className='m-6 hover:cursor-pointer'  onClick={()=>{
+                        <li  className='m-2 md:m- hover:cursor-pointer'  onClick={()=>{
                              const  list1= list.filter((f)=>{
                                     return f.category==="accessories";
                                 }
@@ -53,7 +53,7 @@ function Electronic() {
                                 )
                                 setitemlist(list1);
                         }}>Accessories</li>
-                        <li  className='m-6 hover:cursor-pointer'  onClick={()=>{
+                        <li  className='m-2 md:m- hover:cursor-pointer'  onClick={()=>{
                              const  list1= list.filter((f)=>{
                                     return f.category==="watch";
                                 }
@@ -74,7 +74,7 @@ function Electronic() {
           return(
             <div>
                 
-      { console.log(c)}
+     
        <Link to={"/products/"+c.id} >    <Card  data={c} /></Link>  
        </div>
           )  

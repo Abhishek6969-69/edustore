@@ -21,14 +21,16 @@ function Slider1() {
   
 
     return (
-        <div className='flex flex-wrap gap-8 mx-auto'>
+        <div className='mx-16 flex flex-wrap gap-8 md:mx-auto'>
         
                 {products.map(product => (
                     <div key={product.id} className=' hover:shadow-2xl p-3'>
                         <img className='w-48' src={product.image} alt={product.title} />
+                        <div className='mx-5'>
                         <p>Category: {product.category}</p>
                         <p>Price: ₹{product.price}</p>
                         <p>Rating: {product.rating.rate} ⭐️</p>
+                        </div>
                     </div>
                 ))}
            

@@ -6,13 +6,13 @@ const userslice=createSlice({
     reducers:{
         addUsers(state, action) {
             const existingUser = state.findIndex(user => user.id === action.payload.id);
-            console.log(action.payload);
+            
             if (existingUser==-1) {
                 state.push({ ...action.payload, qty: 1 });
             }
             else{
                 state[existingUser].qty =state[existingUser].qty+ 1;
-                console.log( state[existingUser].qty);
+             
             }
            
         },
@@ -29,7 +29,7 @@ const userslice=createSlice({
         },
         removeuser(state,action){
             state.splice(action.payload,1)
-            console.log(action.payload);
+           
         },
         clearalluser(state,action){
             state.length=0;

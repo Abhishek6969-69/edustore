@@ -15,9 +15,9 @@ function Cart() {
   // Calculate total amount and update state
 
   let [total, settotal] = [0];
-  console.log(cart);
+ 
   return (
-    <div className="flex gap-4  ">
+    <div className="mx-8   md:flex gap-4  ">
       <div>
         <div className="flex items-center justify-center">
           <h1 className="  font-extrabold text-2xl ">Cart</h1>
@@ -25,7 +25,7 @@ function Cart() {
 
         <div className="flex items-center justify-center gap-7">
           <div>
-            <h3>2-items</h3>
+            <h3>{cart.length==0?"":cart.length}</h3>
           </div>
           <div
             onClick={() => {
@@ -38,7 +38,7 @@ function Cart() {
 
         {cart.map((m) => {
           return (
-            <div className="flex  gap-6 p-6 border items-center  w-[650px]     relative ">
+            <div className="w-[250px] my-4  md:flex  gap-6 p-6 border items-center  md:w-[650px]     relative ">
               <div>
                 <img className="  rounded-lg w-48" src={m.image[0].url} />
               </div>
@@ -47,7 +47,7 @@ function Cart() {
                 <h3 className=" capitalize">{m.category}</h3>
                 <p className=" font-bold  text-medium">₹{m.price}</p>
               </div>
-              <div className="flex gap-3 ml-14">
+              <div className="md:flex gap-3 md:ml-14">
                 <div>
                   <p>QTY: {m.qty}</p>
                 </div>
@@ -59,9 +59,9 @@ function Cart() {
                   {(total = total + m.qty * m.price)}
                 </div>
               }
-              <div className="   ">
+              <div className=" md:inline-block  ">
                 <button
-                  className="border  bg-[#023E8A] rounded-xl p-3 absolute right-3 top-14 text-white "
+                  className="border mr-20 mt-12 md:mr-0 md:mt-0 md:ml-0 absolute    bg-[#023E8A] rounded-xl p-3 md:absolute right-3 top-14 text-white "
                   onClick={() => {
                     dispatch(removeuser(m.id));
                   }}
@@ -73,10 +73,11 @@ function Cart() {
           );
         })}
       </div>
-      <div className="  w-1/4 mt-2 ">
-        <div className="  h-14 w-6/12    flex gap-16 items-center ml-2">
-          
-        </div>
+      {
+        total?
+      <div className="   md:w-1/4 mt-2 ">
+        <div className="  h-14 w-6/12    flex gap-16 items-center ml-2"></div>
+     
         <div className=" border   p-4  ">
           <p>Price detail</p>
           <div className=" flex  gap-24">
@@ -112,9 +113,9 @@ function Cart() {
             </div>
           </div>
         </div>
-      </div>
-
-      {console.log(total)}
+      </div>:""
+}
+      
     </div>
   );
 }

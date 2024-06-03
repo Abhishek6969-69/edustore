@@ -2,10 +2,10 @@ import React from 'react'
 
 function Footer() {
     return (
-        <div className='flex  bg-opacity-100   bg-blue-950'>
+        <div className='md:flex  bg-opacity-100   bg-blue-950'>
             
-            <div className='about p-8  '>
-                <h3 className=' text-gray-400  uppercase   text-xl'>About</h3>
+            <div className='about md:p-8  '>
+                <h3 className=' text-gray-400  uppercase   md:text-xl'>About</h3>
                 <div className=' list-none text-white font-thin text-sm ' >
               <li className='my-3'>Contact Us</li>
               <li  className='my-3'>About Us</li>
@@ -15,8 +15,8 @@ function Footer() {
               <li  className='my-3'>Corporate Information</li>
               </div>
             </div>
-            <div className='about p-8  '>
-                <h3 className=' text-gray-400  uppercase   text-xl'>GROUP COMPANIES</h3>
+            <div className='about md:p-8  '>
+                <h3 className=' text-gray-400  uppercase   md:text-xl'>GROUP COMPANIES</h3>
                 <div className=' list-none text-white font-thin text-sm ' >
               <li className='my-3'>Myntra</li>
               <li  className='my-3'>Flipkart Wholesale</li>
@@ -25,8 +25,8 @@ function Footer() {
               
               </div>
             </div>
-            <div className='about p-8  '>
-                <h3 className=' text-gray-400  uppercase   text-xl'>HELP</h3>
+            <div className='about md:p-8  '>
+                <h3 className=' text-gray-400  uppercase   md:text-xl'>HELP</h3>
                 <div className=' list-none text-white font-thin text-sm ' >
               <li className='my-3'>Payments</li>
               <li  className='my-3'>Shipping</li>
@@ -36,8 +36,8 @@ function Footer() {
             
               </div>
             </div>
-            <div className='about p-8  '>
-                <h3 className=' text-gray-400  uppercase   text-xl'>CONSUMER POLICY</h3>
+            <div className='about md:p-8  '>
+                <h3 className=' text-gray-400  uppercase   md:text-xl'>CONSUMER POLICY</h3>
                 <div className=' list-none text-white font-thin text-sm ' >
               <li className='my-3'>Cancellation & Returns</li>
               <li  className='my-3'>Terms of use</li>
@@ -50,8 +50,8 @@ function Footer() {
             
              
             </div>
-            <div className=' p-8  '>
-                <h3 className=' text-gray-400   text-xl'>Mail Us:</h3>
+            <div className=' md:p-8  '>
+                <h3 className=' text-gray-400   md:text-xl'>Mail Us:</h3>
                 <div className='py-3'>
                 <p className='  max-w-56   tracking-widest   text-white font-thin text-sm '>Flipkart Internet Private Limited,
 
@@ -67,8 +67,8 @@ Karnataka, India</p>
 </div>
             </div>
 
-            <div className=' p-8  '>
-                <h3 className=' text-gray-400   text-xl'>Registered Office Address:</h3>
+            <div className=' md:p-8  '>
+                <h3 className=' text-gray-400   md:text-xl'>Registered Office Address:</h3>
                 <div className='py-3'>
                 <p className='  max-w-56 tracking-widest    text-white font-thin text-sm '>Flipkart Internet Private Limited,
 
