@@ -5,11 +5,10 @@ function Beautycard(props) {
     return (
         <div class="w-96  h-72 hover:shadow-xl  rounded-lg ">
 
-        <img className=' w-36 mx-20' src={props.val.formattedImageUrl} />
+        <img className=' w-36 mx-20' src={props.val.formattedImageUrl}  alt="beautyimg"/>
         <div className=' mx-10'>
         <h3 className=' mx-20'>{props.val.brand}</h3>
-        <p className=' mx-20'>price: {props.val.formattedListPrice?props.val.formattedListPrice:props.val.
-formattedPriceV2
+        <p className=' mx-20'>price: {props.val.formattedListPrice?props.val.formattedListPrice:props.val.formattedPriceV2
 } </p>
 <p className=' mx-20 '>offer:{props?.val?.dealBadge?.labelText?props?.val?.dealBadge?.labelText:"No offer"
 }</p>

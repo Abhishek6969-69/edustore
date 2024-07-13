@@ -3,7 +3,7 @@ import { useEffect,useState } from 'react'
 import { API } from '../utils/constant';
 import Card from './card';
 import { Link } from 'react-router-dom';
-import Footer from './footer';
+
 function Electronic() {
     
     const [itemlist,setitemlist]=useState([]);

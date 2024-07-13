@@ -2,11 +2,10 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { Card_API } from "../utils/constant";
 import { useParams } from "react-router-dom";
-import { API } from "../utils/constant";
-import { useDispatch, useSelector } from "react-redux";
+
+import { useDispatch } from "react-redux";
 import { addUsers } from "../store/slice/userslice";
-import Card from "./card";
-import Store from "../store/slice/store";
+
 
 function Products() {
   const { productId } = useParams();
@@ -34,9 +33,7 @@ function Products() {
   const additemhandle = () => {
     dispatch(addUsers(otherdata, 1));
   };
-  const handleincrease = () => {
-    dispatch(addUsers(otherdata, 1));
-  };
+  
 
   return (
     <div className=" w-[420px] md:w-screen   md:mt-0  md:flex  md:mx-0 ">
@@ -45,7 +42,7 @@ function Products() {
           productData.map((p) => {
             return (
               <div className="  ">
-                <img className="w-[380px] my-3  mx-[5px]  md:w-80  md:h-96 object-cover" src={p.url}></img>
+                <img className="w-[380px] my-3  mx-[5px]  md:w-80  md:h-96 object-cover" src={p.url} alt="product"></img>
               </div>
             );
           })}
@@ -59,7 +56,7 @@ function Products() {
           <div className="mx-8 md:mx-0 flex ">
             <h1>{otherdata?.stars} </h1>
             <img
-              className=" w-7 "
+              className=" w-7 " alt="img"
               src="https://as1.ftcdn.net/v2/jpg/04/21/45/54/1000_F_421455445_QnmwPOsojdXMUrnm7LGUoPgKA2xZyHNF.jpg"
             />
           </div>

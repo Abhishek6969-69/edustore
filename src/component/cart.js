@@ -1,19 +1,15 @@
-import React, { useState } from "react";
-import { UseDispatch, useDispatch, useSelector } from "react-redux";
-import Store from "../store/slice/store";
-import { addUsers, clearalluser, removeuser } from "../store/slice/userslice";
-import Card from "./card";
-import Footer from "./footer";
+import React from "react";
+import {  useDispatch, useSelector } from "react-redux";
+
+import { clearalluser, removeuser } from "../store/slice/userslice";
+
 
 function Cart() {
   const dispatch = useDispatch();
   const cart = useSelector((store) => {
     return store.user;
   });
-  const [totalAmount, setTotalAmount] = useState(0); // Initialize totalAmount state to 0
-
-  // Calculate total amount and update state
-
+ 
   let [total, settotal] = [0];
  
   return (
@@ -25,7 +21,7 @@ function Cart() {
 
         <div className="flex items-center justify-center gap-7">
           <div>
-            <h3>{cart.length==0?"":cart.length}</h3>
+            <h3>{cart.length===0?"":cart.length}</h3>
           </div>
           <div
             onClick={() => {
@@ -40,7 +36,7 @@ function Cart() {
           return (
             <div className="w-[250px] my-4  md:flex  gap-6 p-6 border items-center  md:w-[650px]     relative ">
               <div>
-                <img className="  rounded-lg w-48" src={m.image[0].url} />
+                <img className="  rounded-lg w-48" src={m.image[0].url} alt="cart img" />
               </div>
               <div>
                 <h3 className="  font-bold">{m.name}</h3>

@@ -10,6 +10,7 @@ import Cart from "./component/cart";
 import Home from "./component/home";
 import Beauty from "./component/beauty";
 import Profile from "./component/profile";
+import Login from "./component/login";
 const Applayout=()=>{
     return(
         <div  >
@@ -52,6 +53,10 @@ export const approuter=createBrowserRouter([
             path:"/profile",
             element:<Profile />
         },
+        {
+            path:"/login",
+            element:<Login />
+        }
         
     ]
    },

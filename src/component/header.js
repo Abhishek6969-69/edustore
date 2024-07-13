@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { IMG_URL } from "../utils/constant";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 import { useAuth0 } from "@auth0/auth0-react";
-import Profile from "./profile";
+
 
 function Header() {
-  const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
+ const navigate=useNavigate()
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -40,7 +41,11 @@ function Header() {
           placeholder="search for products"
         />
       </div>
-         
+         <div className=" flex items-center">
+         <button onClick={()=>{
+          navigate("/login")
+         }} className="hidden md:inline-block mt-8 border  bg-[#023E8A] w-24 p-4 rounded-lg my-6  text-white">Login</button>
+         </div>
       <div className="inline md:flex    md:items-center md:absolute right-8 top-8 justify-center">
         <div className=" flex   md:mx-0 md:flex gap-8 ">
           <Link to="/profile">
@@ -76,23 +81,7 @@ function Header() {
      
       </div>
 
-      {!isAuthenticated ? (
-        <button
-          className="hidden md:inline-block border border-2    border-[#023E8A] w-24 p-2  rounded-md my-6 "
-          onClick={() => loginWithRedirect()}
-        >
-          Log In
-        </button>
-      ) : (
-        <button
-          className="border border-2 hidden md:inline-block   border-[#023E8A]    w-20 p-2  rounded-md my-6 "
-          onClick={() =>
-            logout({ logoutParams: { returnTo: window.location.origin } })
-          }
-        >
-          Log Out
-        </button>
-      )}
+      
     </div>
   );
 }

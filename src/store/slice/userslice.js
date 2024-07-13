@@ -1,5 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit"
-import { useState } from "react";
+
 const userslice=createSlice({
     name:"user",
     initialState:[],
@@ -7,7 +7,7 @@ const userslice=createSlice({
         addUsers(state, action) {
             const existingUser = state.findIndex(user => user.id === action.payload.id);
             
-            if (existingUser==-1) {
+            if (existingUser===-1) {
                 state.push({ ...action.payload, qty: 1 });
             }
             else{
