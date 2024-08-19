@@ -28,7 +28,7 @@ const userslice=createSlice({
             }
         },
         removeuser(state,action){
-            state.splice(action.payload,1)
+           return state.filter((product)=>product.id!==action.payload)
            
         },
         clearalluser(state,action){

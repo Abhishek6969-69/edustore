@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Footer from './footer'
-import Slider1 from './slider'
+import Slider from './slider'
 function Home() {
   
     return (
@@ -20,7 +20,10 @@ function Home() {
              <img className='w-52 mx-3 md:w-80 mt-5 md:mt-0 rounded-md' src='https://c8.alamy.com/comp/M0649P/cheerful-people-buying-detergents-for-house-in-the-shopping-mall-M0649P.jpg' />
             </div>
         </div>
-       <Slider1 />
+        {/* <div >
+        <Slider />
+        </div> */}
+       
        <div className='hidden w-[100px] md:w-screen md:inline-block'>
        <Footer /> 
        </div>

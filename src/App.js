@@ -8,14 +8,15 @@ import Electronic from "./component/electronic";
 import Products from "./component/products";
 import Cart from "./component/cart";
 import Home from "./component/home";
-import Beauty from "./component/beauty";
+
 import Profile from "./component/profile";
 import Login from "./component/login";
+
 const Applayout=()=>{
     return(
-        <div  >
+        <div className=" " >
             <Provider store={Store}>
-                <div className="">
+                <div className=" ">
             <Header />
             </div>
             <Outlet />
@@ -23,7 +24,7 @@ const Applayout=()=>{
         </div>
     )
 }
-export const approuter=createBrowserRouter([
+export const approuter = createBrowserRouter([
     {
     path:"/",
     element:<Applayout />,
@@ -45,10 +46,8 @@ export const approuter=createBrowserRouter([
             path:"/cart",
             element:<Cart />
         },
-        {
-            path:"/beauty",
-            element:<Beauty />
-        },
+       
+        
         {
             path:"/profile",
             element:<Profile />

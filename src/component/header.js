@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { IMG_URL } from "../utils/constant";
 import { Link, useNavigate } from "react-router-dom";
 
-import { useAuth0 } from "@auth0/auth0-react";
+// import { useAuth0 } from "@auth0/auth0-react";
 
 
 function Header() {
@@ -31,9 +31,7 @@ function Header() {
           <li className="my-6 mx-[15px] md:m-4">
             <Link to="/electronic">Electronics</Link>
           </li>
-          <li className="my-6 mx-[15px] md:m-4">
-            <Link to="/beauty">Beauty</Link>
-          </li>
+          
         </ul>
         <input
           type="text"
